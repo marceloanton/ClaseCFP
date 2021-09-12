@@ -16,7 +16,7 @@
         tools:context=".MainActivity">
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/imagenNoticia"
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
@@ -26,30 +26,31 @@
             app:srcCompat="@drawable/capcel" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tituloNoticia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
             android:lineSpacingExtra="14sp"
             android:text="Aprenda edición de imagenes"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+            app:layout_constraintTop_toBottomOf="@+id/imagenNoticia" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/fechaNoticia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:text="10/05/2030"
             android:textSize="12sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tituloNoticia"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/noticias"
             android:layout_width="331dp"
             android:layout_height="259dp"
             android:layout_marginStart="16dp"
@@ -60,7 +61,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/tituloNoticia" />
 
         <Button
             android:id="@+id/btnSiguiente"
@@ -69,11 +70,16 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:onClick="siguienteNoticia"
             android:text="Siguiente"
             android:textSize="12sp"
+            app:icon="@android:drawable/ic_media_ff"
+            app:iconPadding="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tituloNoticia"
+            app:layout_constraintTop_toBottomOf="@+id/noticias"
             app:layout_constraintVertical_bias="1.0" />
 
         <Button
@@ -81,21 +87,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="12dp"
             android:layout_marginBottom="16dp"
+            android:onClick="anteriorNoticia"
             android:text="Anterior"
             android:textSize="12sp"
+            app:icon="@android:drawable/ic_media_rew"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toStartOf="@+id/autorNoticia"
+            app:layout_constraintTop_toBottomOf="@+id/imagenNoticia"
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/autorNoticia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="168dp"
             android:text="ByrkaCode"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
             app:layout_constraintBaseline_toBaselineOf="@+id/btnSiguiente"
             app:layout_constraintStart_toStartOf="parent" />
 
